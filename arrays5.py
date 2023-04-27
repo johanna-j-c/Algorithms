@@ -47,3 +47,25 @@ def get_nth_largest_num(array, n):
 # Example Input: [4, 5, 6, 7, 10, 11, 12, 13], 7,11
 # Example Output: [4, 5, 6, 7, 10, 11, 12]
 
+def remove_values_between_indexes(array, start, end):
+    # store values after ending index
+    last_numbers = []
+    for i in range(len(array)):
+        if i > end:
+            last_numbers.append(array[i])
+    
+    # pop end index to start index
+    for i in range(len(array)):
+        i = -1
+        if array[i] != array[start-1]:
+            array.pop(i)
+        i -= 1
+
+    # append stored values
+    return array + last_numbers
+
+print(remove_values_between_indexes([5, 8, 1, 3, 7, 5, 6,10], 3, 6))
+print('**********************')
+print(remove_values_between_indexes([4, 5, 6, 7, 10, 11, 12, 13], 5,7))
+print('**********************')
+print(remove_values_between_indexes([4, 5, 6, 7, 10, 11, 12, 13], 7,11))
