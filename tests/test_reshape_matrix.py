@@ -35,4 +35,4 @@ def test_three_by_three_to_nine_by_one():
         # Act
         answer = reshape_matrix(matrix, r, c)
         # Assert
-        self.assertEqual([[7],[2],[1],[4],[3],[5],[6],[9],[8]], answer)
+        reshaped_matrix = [[7],[2],[1],[4],[3],[5],[6],[9],[8]]

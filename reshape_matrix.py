@@ -11,9 +11,12 @@ def reshape_matrix(matrix, r, c):
     i = 0
     j = 0
     for x in matrix:
-        for y in matrix[x]:
+        for y in x:
             new_matrix[i][j] = y
-            j += 1
-        i += 1
-    
+            if j < c-1:
+                j += 1
+            elif i < r-1:
+                i += 1
+                j = 0
+        
     return new_matrix
