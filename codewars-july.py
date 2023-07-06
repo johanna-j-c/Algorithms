@@ -31,3 +31,6 @@ def get_count(sentence):
 
 def opposite(number):
         return number*-1
+
+def number_to_string(num):
+    return str(num)
