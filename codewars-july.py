@@ -28,3 +28,6 @@ def get_count(sentence):
             count += 1
     
     return count
+
+def opposite(number):
+        return number*-1
