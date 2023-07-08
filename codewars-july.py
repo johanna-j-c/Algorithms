@@ -18,3 +18,13 @@ def disemvowel(string_):
     for letter in vowels:
         string_ = string_.replace(letter, "")
     return string_
+
+def get_count(sentence):
+    vowels = ["a","e","i","o",'u']
+    count = 0
+    
+    for letter in sentence:
+        if letter in vowels:
+            count += 1
+    
+    return count
