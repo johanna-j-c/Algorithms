@@ -12,3 +12,9 @@ def likes(names):
     else:
         diff = num - 2
         return f"{names[0]}, {names[1]} and {diff} others like this"
+    
+def disemvowel(string_):
+    vowels = ["a","A","E","e","I","i","O","o","U","u"]
+    for letter in vowels:
+        string_ = string_.replace(letter, "")
+    return string_
