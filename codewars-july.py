@@ -81,3 +81,15 @@ prices5 = [2]
 assert maxProfit(prices5) == 0
 
 print('Test cases passed')
+
+def array_diff(a, b):
+    copy_a = a.copy()
+    set_b = set(b)
+    for num_b in set_b:
+        for num_a in a:
+            if num_b == num_a:
+                copy_a.remove(num_a)
+            elif num_b not in a:
+                continue
+    
+    return copy_a
