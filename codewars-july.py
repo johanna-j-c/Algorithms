@@ -34,3 +34,50 @@ def opposite(number):
 
 def number_to_string(num):
     return str(num)
+
+# Assume length will be at least 1
+# no negative prices
+# all int
+# just consider max profit, doesn't matter consec duplicates
+
+def maxProfit(prices):
+    """
+    :type prices: List[int]
+    :rtype: int
+    """
+    # initiate a var to hold max profit
+    max_profit = 0
+
+    # loop through the prices array 
+    for i in range(len(prices)):
+      for j in range(i,len(prices)):
+        diff = prices[j] - prices[i]
+        if diff > 0 and diff > max_profit:
+          max_profit = diff
+    print(max_profit)  
+    return max_profit  
+  # compare the price of the day with the upcoming days
+  # nested loop to acces the price of the upcoming days
+  # find the difference
+  # the highest day will added to the max profit
+
+  # return the max profit
+
+
+
+# prices1 = [7,1,5,3,6,4]
+# assert maxProfit(prices1) == 5
+
+# prices2 = [7,6,4,3,1]
+# assert maxProfit(prices2) == 0
+
+# prices3 = [3, 10, 10, 1]
+# assert maxProfit(prices3) == 7
+
+# prices4 = [2, 10, 4, 2, 8, 10]
+# assert maxProfit(prices4) == 8
+
+prices5 = [2]
+assert maxProfit(prices5) == 0
+
+print('Test cases passed')
