@@ -93,3 +93,14 @@ def array_diff(a, b):
                 continue
     
     return copy_a
+
+def duplicate_count(text):
+    count = 0
+    text = text.lower()
+    set_text = set(text)
+    for letter in set_text:
+        current_count = text.count(letter)
+        if current_count > 1:
+            count += 1
+        
+    return count
